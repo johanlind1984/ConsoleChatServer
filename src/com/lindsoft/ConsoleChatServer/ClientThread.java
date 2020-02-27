@@ -40,6 +40,7 @@ public class ClientThread extends Thread {
             String message = " ";
 
             do {
+
                 message = reader.readLine();
                 messageToServer = "[" + nickName + "]: " + message;
                 chatServer.broadCast(messageToServer, this);
@@ -66,6 +67,9 @@ public class ClientThread extends Thread {
     private void printConnectedClients() {
         if(!chatServer.isEmpty()) {
             System.out.println("Server have the following clients connected:");
+            for (String nickName : chatServer.getNickNames()) {
+                System.out.println(nickName);
+            }
         } else {
             System.out.println("No other clients connected");
         }

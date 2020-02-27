@@ -13,6 +13,8 @@ public class ChatServer {
 
     Set<String> nickNames;
     Set<ClientThread> clientThreads;
+    private Set<String> nickNames;
+    private Set<ClientThread> clientThreads;
     int port;
 
     public ChatServer(int port) {
@@ -81,5 +83,9 @@ public class ChatServer {
             nickNames.remove(clientThread.getNickName());
             System.out.println(clientThread.getNickName() +  " has left the chat.");
         }
+    }
+
+    public Set<String> getNickNames() {
+        return nickNames;
     }
 }
