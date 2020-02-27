@@ -11,8 +11,6 @@ import java.util.Set;
 
 public class ChatServer {
 
-    Set<String> nickNames;
-    Set<ClientThread> clientThreads;
     private Set<String> nickNames;
     private Set<ClientThread> clientThreads;
     int port;
